@@ -596,6 +596,52 @@ execute next line
 2.	ถ้าค่าที่ผู้ใช้ป้อน น้อยกว่า ค่าที่สุ่มมาได้ ให้พิมพ์ ```“Too Low, You loss!!”```ออกทางหน้าจอ
 3.	ถ้าค่าที่ผู้ใช้ป้อน เท่ากับ ค่าที่สุ่มมาได้ ให้พิมพ์ ```“Okay, You win!!”``` ออกทางหน้าจอ
 
+ผลการทดลอง
+
+
+```
+code
+```
+```
+using System;
+namespace Lab8
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random random = new Random();
+            int randomNumber = random.Next(0, 100);
+            Console.WriteLine("Random : " + randomNumber);
+            Console.Write("Insert Number : ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            if (a > randomNumber)
+            {
+                Console.WriteLine("Too Hight, You loss!!");
+            }
+            if (a < randomNumber)
+            {
+                Console.WriteLine("Too Low, You loss!!");
+            }
+            if (a == randomNumber)
+            {
+                Console.WriteLine("Okay, You win!!");
+            }
+
+        }
+    }
+}
+```
+
+![](https://github.com/patimakorn54/LAB-08/blob/master/Image/Capture9.JPG?raw=true)
+
+
+![](https://github.com/patimakorn54/LAB-08/blob/master/Image/Capture9_2.JPG?raw=true)
+
+
+![](https://github.com/patimakorn54/LAB-08/blob/master/Image/Capture9_3.JPG?raw=true)
+
+
 ###1.2.2.	คำสั่ง ```if…else```
 
 เงื่อนไขที่เป็นไปได้ของคำสั่งในการตัดสินใจมีสองทางเสมอ (true และ false) ที่ผ่านมา เราจะเห็นว่า คำสั่ง if เป็นคำสั่งที่เลือกทำเพียงทางเดียว (เฉพาะในกรณีที่เงื่อนไขเป็น true เท่านั้น) หากต้องการให้โปรแกรมทำงานทั้งกรณีที่เงื่อนไขเป็น true และ false เราต้องใช้คำสั่ง if…else โดยมีรูปแบบดังนี้
@@ -643,6 +689,42 @@ this line is always execute
 ให้เขียนโปรแกรมสุ่มตัวเลข (จากใบงานที่ 7) แล้วใช้คำสั่ง ```if…else``` โดยมีเงื่อนไขต่อไปนี้
 
 1. ถ้าค่าที่ผู้ใช้ป้อน เท่ากับ ค่าที่สุ่มมาได้ ให้พิมพ์ ```“Hooray, You win!!”``` ออกทางหน้าจอ มิฉะนั้นให้พิมพ์คำว่า ```“Sorry, You loss!!”```
+
+```
+code
+```
+```
+using System;
+
+namespace Lab8
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random random = new Random();
+            int randomNumber = random.Next(0, 100);
+            Console.WriteLine("Random : " + randomNumber);
+            Console.Write("Insert Number : ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            if (a == randomNumber)
+            {
+                Console.WriteLine("Hooray, You win!!");
+            }
+            else
+            {
+                Console.WriteLine("Sorry, You loss!!");
+            }
+        }
+    }
+}
+```
+
+![](https://github.com/patimakorn54/LAB-08/blob/master/Image/Capture10_1.JPG?raw=true)
+
+
+![](https://github.com/patimakorn54/LAB-08/blob/master/Image/Capture10_2.JPG?raw=true)
+
 
 ###1.2.3.	คำสั่ง ```if``` ซ้อนกัน (nested if)
 คำสั่ง ```if``` สามารถเขียนซ้อนกันเป็นชั้นได้ เรียกว่า nested if มีรูปแบบดังนี้
@@ -736,6 +818,71 @@ Grade C
 
 3. รูปแบบการพิมพ์คือ score: [sss] grade: [gg] เมื่อ sss คือคะแนน และ gg คือ เกรดที่ได้
 
+```
+code
+```
+```
+using System;
+namespace Lab8
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random random = new Random();
+            int sss = random.Next(0, 100);
+
+            if (sss < 50)
+            {
+                Console.WriteLine("Score : " + sss);
+                Console.WriteLine("Grade : F");
+            }
+            else if (sss < 55)
+            {
+                Console.WriteLine("Score : " + sss);
+                Console.WriteLine("Grade : D");
+            }
+            else if (sss < 60)
+            {
+                Console.WriteLine("Score : " + sss);
+                Console.WriteLine("Grade : D+");
+            }
+            else if (sss < 65)
+            {
+                Console.WriteLine("Score : " + sss);
+                Console.WriteLine("Grade : C");
+            }
+            else if (sss < 70)
+            {
+                Console.WriteLine("Score : " + sss);
+                Console.WriteLine("Grade : C+");
+            }
+            else if (sss < 75)
+            {
+                Console.WriteLine("Score : " + sss);
+                Console.WriteLine("Grade : B");
+            }
+            else if (sss < 80)
+            {
+                Console.WriteLine("Score : " + sss);
+                Console.WriteLine("Grade : B+");
+            }
+            else
+            {
+                Console.WriteLine("Score : " + sss);
+                Console.WriteLine("Grade : A");
+            }
+        }
+    }
+}
+```
+
+
+![](https://github.com/patimakorn54/LAB-08/blob/master/Image/Capture11.JPG?raw=true)
+
+
+![](https://github.com/patimakorn54/LAB-08/blob/master/Image/Capture11_2.JPG?raw=true)
+
 ###1.2.5. คำสั่ง ```switch```
 
 ในกรณีที่มีทางเลือกในการตัดสินใจเป็นจำนวนมาก ไม่เป็นการสะดวกที่จะเขียนเป็นโปรแกรมยาวๆ เช่นในกรณีของคำสั่ง if…else…if ภาษา C# มีคำสั่งตัดสินใจเลือกทิศทางของโปรแกรมแบบหลายทางเลือกให้ใช้คือคำสั่ง switch ซึ่งรูปแบบการใช้งาน ดังนี้
@@ -812,6 +959,56 @@ thu|	Thursday	|Orange
 fri|	Friday	|Blue
 sat|	Saturday	|Purple
 อื่นๆ|	 ---|	---
+
+```
+code
+```
+```
+using System;
+
+class Lab8
+{
+    static void Main(string[] args)
+    {
+        Console.Write("Input day name : ");
+        string day = Console.ReadLine();
+        string message;
+        switch (day.ToUpper())
+        {
+            case "SUN":
+                message = "sun is Sunday ,Color is Red";
+                break;
+            case "MON":
+                message = "mon is Monday ,Color is Yellow";
+                break;
+            case "TUE":
+                message = "tue is Tuesday ,Color is Pink";
+                break;
+            case "WED":
+                message = "wed is Wednesday ,Color is Green";
+                break;
+            case "THU":
+                message = "thu is Thuesday ,Color is Orange";
+                break;
+            case "FRI":
+                message = "fri is Friday ,Color is Blue";
+                break;
+            case "SAT":
+                message = "sat is Saturday ,Color is Purple";
+                break;
+            default:
+                message = "Others is --- ,Color is ---";
+                break;
+        }
+        Console.WriteLine(message);
+    }
+}
+```
+
+
+
+![](https://github.com/patimakorn54/LAB-08/blob/master/Image/Capture11_2.JPG?raw=true)
+
 
 
 ##Reference
