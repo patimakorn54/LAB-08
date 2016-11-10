@@ -1007,7 +1007,7 @@ class Lab8
 
 
 
-![](https://github.com/patimakorn54/LAB-08/blob/master/Image/Capture11_2.JPG?raw=true)
+![](https://github.com/patimakorn54/LAB-08/blob/master/Image/Capture12.JPG?raw=true)
 
 
 
