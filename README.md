@@ -350,7 +350,187 @@ public class ExceptionLearning
         throw new _____________________();
     }
  }
-````
+```
+```
+code DivideByZeroException
+```
+```
+using System;
+using System.IO;
+public class ExceptionLearning
+{
+    public static void Main()
+    {
+        int a = 10;
+        int b = 20;
+        int c;
+        try
+        {
+            c = div(a, b);
+        }
+        catch (DivideByZeroException e)
+        {
+
+            Console.WriteLine("DivideByZeroException");
+            Console.WriteLine(e.Message);
+        }
+        catch (NullReferenceException e)
+        {
+            Console.WriteLine("NullReferenceException");
+            Console.WriteLine(e.Message);
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("Exception");
+            Console.WriteLine(e.Message);
+        }
+    }
+    private static int div(int a, int b)
+    {
+        throw new DivideByZeroException();
+    }
+}
+```
+
+
+![](https://github.com/patimakorn54/LAB-08/blob/master/Image/Capture5.JPG?raw=true)
+
+
+```
+code NullReferenceException
+```
+```
+using System;
+using System.IO;
+public class ExceptionLearning
+{
+    public static void Main()
+    {
+        int a = 10;
+        int b = 20;
+        int c;
+        try
+        {
+            c = div(a, b);
+        }
+        catch (DivideByZeroException e)
+        {
+
+            Console.WriteLine("DivideByZeroException");
+            Console.WriteLine(e.Message);
+        }
+        catch (NullReferenceException e)
+        {
+            Console.WriteLine("NullReferenceException");
+            Console.WriteLine(e.Message);
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("Exception");
+            Console.WriteLine(e.Message);
+        }
+    }
+    private static int div(int a, int b)
+    {
+        throw new NullReferenceException();
+    }
+}
+```
+
+![](https://github.com/patimakorn54/LAB-08/blob/master/Image/Capture6.JPG?raw=true)
+
+
+```
+code FileNotFoundException
+```
+```
+using System;
+using System.IO;
+public class ExceptionLearning
+{
+    public static void Main()
+    {
+        int a = 10;
+        int b = 20;
+        int c;
+        try
+        {
+            c = div(a, b);
+        }
+        catch (DivideByZeroException e)
+        {
+
+            Console.WriteLine("DivideByZeroException");
+            Console.WriteLine(e.Message);
+        }
+        catch (NullReferenceException e)
+        {
+            Console.WriteLine("NullReferenceException");
+            Console.WriteLine(e.Message);
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("Exception");
+            Console.WriteLine(e.Message);
+        }
+    }
+    private static int div(int a, int b)
+    {
+        throw new FileNotFoundException();
+    }
+}
+```
+
+![](https://github.com/patimakorn54/LAB-08/blob/master/Image/Capture7.JPG?raw=true)
+
+
+```
+code FormatException
+```
+```
+using System;
+using System.IO;
+public class ExceptionLearning
+{
+    public static void Main()
+    {
+        int a = 10;
+        int b = 20;
+        int c;
+        try
+        {
+            c = div(a, b);
+        }
+        catch (DivideByZeroException e)
+        {
+
+            Console.WriteLine("DivideByZeroException");
+            Console.WriteLine(e.Message);
+        }
+        catch (NullReferenceException e)
+        {
+            Console.WriteLine("NullReferenceException");
+            Console.WriteLine(e.Message);
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("Exception");
+            Console.WriteLine(e.Message);
+        }
+    }
+    private static int div(int a, int b)
+    {
+        throw new FormatException();
+    }
+}
+```
+
+
+![](https://github.com/patimakorn54/LAB-08/blob/master/Image/Capture8.JPG?raw=true)
 
 ###เรื่องของ exception นี้ศึกษาเพิ่มเติมได้ [ที่นี่](http://msdn.microsoft.com/en-us/library/vstudio/2w8f0bss%28v=vs.100%29.aspx)
 
